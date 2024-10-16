@@ -1,0 +1,18 @@
+- name: Datatypes
+  hosts: web
+  vars:
+    Course: "aws & DevOps"
+    Tools: 
+    - k8s
+    - AWS
+    - Docker
+    - Terraform
+    Experience:
+      aws: 2
+      Docker: 1
+      Terraform: 1
+    Realtime: true
+  tasks:
+  - name: print info
+    ansible.builtin.debug:
+      msg: "Hi iam skilled in {{Course}} ans tools covered {{Tools}} and have Experience {{Experience}} and its a {{Realtime}}"
