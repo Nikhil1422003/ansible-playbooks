@@ -1,0 +1,12 @@
+- name: loops
+  hosts: web
+  tasks:
+  - name: print loops
+    ansible.builtin.debug:
+      msg: "Hi this is {{ item }}"
+    loop:
+    - k8s
+    - Linux
+    - AWS
+    - Docker
+    - Terraform
